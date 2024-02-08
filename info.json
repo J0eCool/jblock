@@ -1,0 +1,11 @@
+{
+    "name": "jblock",
+    "version": "0.1.0",
+    "title": "JBlock",
+    "author": "J0eCool",
+    "factorio_version": "1.1",
+    "dependencies": [
+        "base >= 1.1"
+    ],
+    "description": "A mod designed from the ground up to be played as a Skyblock"
+}
