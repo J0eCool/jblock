@@ -17,7 +17,7 @@ data:extend{
     type = "item",
     name = "log",
     icon = "__base__/graphics/icons/wood.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon_size = 64, icon_mipmaps = 1,
     fuel_value = "1MJ",
     fuel_category = "chemical",
     subgroup = "raw-resource",
@@ -27,7 +27,7 @@ data:extend{
   {
     type = "item",
     name = "plank",
-    icon = "__base__/graphics/icons/wood.png",
+    icon = "__jblock__/graphics/icons/plank.png",
     icon_size = 64, icon_mipmaps = 4,
     fuel_value = "500kJ",
     fuel_category = "chemical",
@@ -37,9 +37,17 @@ data:extend{
   {
     type = "item",
     name = "seed",
-    icon = "__base__/graphics/icons/wood.png",
-    icon_size = 64, icon_mipmaps = 4,
+    icon = "__jblock__/graphics/icons/seed.png",
+    icon_size = 64, icon_mipmaps = 1,
     order = "a[seed]",
+    stack_size = 50
+  },
+  {
+    type = "item",
+    name = "stick",
+    icon = "__jblock__/graphics/icons/stick.png",
+    icon_size = 64, icon_mipmaps = 1,
+    order = "a[stick]",
     stack_size = 50
   },
 
@@ -60,13 +68,21 @@ data:extend{
   -- Recipes
   {
     type = "recipe",
-    -- TODO: it's looking for item-names.split-log and not finding anything
     name = "split-log",
     enabled = true,
     energy_required = 0.5,
     ingredients = {{"log", 1}},
     result = "plank",
     result_count = 2,
+  },
+  {
+    type = "recipe",
+    name = "split-plank",
+    enabled = true,
+    energy_required = 0.5,
+    ingredients = {{"plank", 1}},
+    result = "stick",
+    result_count = 4,
   },
 
   {
