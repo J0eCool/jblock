@@ -15,6 +15,15 @@ data:extend{
   -- Resources
   {
     type = "item",
+    name = "seed",
+    subcategory = "wood",
+    icon = "__jblock__/graphics/icons/seed.png",
+    icon_size = 64, icon_mipmaps = 1,
+    order = "a[seed]",
+    stack_size = 50
+  },
+  {
+    type = "item",
     name = "log",
     icon = "__base__/graphics/icons/wood.png",
     icon_size = 64, icon_mipmaps = 1,
@@ -27,28 +36,39 @@ data:extend{
   {
     type = "item",
     name = "plank",
+    subcategory = "wood",
     icon = "__jblock__/graphics/icons/plank.png",
     icon_size = 64, icon_mipmaps = 4,
-    fuel_value = "500kJ",
+    fuel_value = "400kJ",
     fuel_category = "chemical",
     order = "a[plank]",
     stack_size = 200
   },
   {
     type = "item",
-    name = "seed",
-    icon = "__jblock__/graphics/icons/seed.png",
-    icon_size = 64, icon_mipmaps = 1,
-    order = "a[seed]",
-    stack_size = 50
-  },
-  {
-    type = "item",
     name = "stick",
+    subcategory = "wood",
     icon = "__jblock__/graphics/icons/stick.png",
     icon_size = 64, icon_mipmaps = 1,
+    fuel_value = "80kJ",
+    fuel_category = "chemical",
     order = "a[stick]",
-    stack_size = 50
+    stack_size = 200
+  },  {
+    type = "item",
+    name = "sawdust",
+    subcategory = "wood",
+    icon = "__jblock__/graphics/icons/stick.png",
+    icon_size = 64, icon_mipmaps = 1,
+    fuel_value = "20kJ",
+    fuel_category = "chemical",
+    order = "a[sawdust]",
+    stack_size = 500
+  },
+
+  {
+    type = "fuel-category",
+    name = "mana"
   },
 
   ----------------------------------------------------------------
@@ -66,6 +86,15 @@ data:extend{
 
   ----------------------------------------------------------------
   -- Recipes
+  {
+    type = "recipe",
+    name = "scrounge",
+    enabled = true,
+    energy_required = 5,
+    ingredients = {},
+    result = "sawdust",
+    result_count = 1,
+  },
   {
     type = "recipe",
     name = "split-log",
